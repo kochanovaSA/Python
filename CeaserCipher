@@ -1,0 +1,37 @@
+message= open('blees rng.txt','r', encoding='utf-8')
+simpleText = message.read()
+print(simpleText)
+encrypt=(simpleText)
+key = int(input("Укажите ключ:"))
+def ceaser_cipher ( letter, k):
+    alphabet = "абвгдеёзжийклмнопрстуфхцчъыьэюяабвгдеёзжийклмнопрстуфхцчъыьэюя"
+    encrypted = ""
+    for letter in encrypt:
+        if letter in alphabet:
+            position  = alphabet.find(letter)
+            newPosition = position + key
+            encrypted = encrypted + alphabet[newPosition]
+        else:
+            encrypted = encrypted + letter
+        print(encrypted)
+    encryptMessage = open('kekw.txt', 'w', encoding='utf-8')
+    encryptMessage.write(encrypted)
+ceaser_cipher(encrypt, key)
+encryptMessage = open('kekw.txt', 'r', encoding='utf-8')
+encryptText = encryptMessage.read()
+print(encryptText)
+decipher= (encryptText)
+def ceaser_decipher (encrypted, k):
+    alphabet = "абвгдеёзжийклмнопрстуфхцчъыьэюяабвгдеёзжийклмнопрстуфхцчъыьэюя"
+    deciphered = ""
+    for encrypted in decipher:
+        if encrypted in alphabet:
+            positionII= alphabet.find(encrypted)
+            newPositionII = positionII - key
+            deciphered = deciphered + alphabet[newPositionII]
+        else:
+            deciphered = deciphered + encrypted
+        print(deciphered)
+    decipherMessage = open('PogChamp.txt', 'w', encoding='utf-8')
+    decipherMessage.write(deciphered)
+ceaser_decipher(decipher,key)
