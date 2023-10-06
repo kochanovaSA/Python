@@ -1,2 +1,2 @@
-# leben
+# Python
 Пробный репозиторий Python
