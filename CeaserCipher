@@ -1,4 +1,4 @@
-message= open('blees rng.txt','r', encoding='utf-8')
+message= open('text.txt','r', encoding='utf-8')
 simpleText = message.read()
 print(simpleText)
 encrypt=(simpleText)
@@ -14,10 +14,10 @@ def ceaser_cipher ( letter, k):
         else:
             encrypted = encrypted + letter
         print(encrypted)
-    encryptMessage = open('kekw.txt', 'w', encoding='utf-8')
+    encryptMessage = open('cipher.txt', 'w', encoding='utf-8')
     encryptMessage.write(encrypted)
 ceaser_cipher(encrypt, key)
-encryptMessage = open('kekw.txt', 'r', encoding='utf-8')
+encryptMessage = open('cipher.txt', 'r', encoding='utf-8')
 encryptText = encryptMessage.read()
 print(encryptText)
 decipher= (encryptText)
@@ -32,6 +32,6 @@ def ceaser_decipher (encrypted, k):
         else:
             deciphered = deciphered + encrypted
         print(deciphered)
-    decipherMessage = open('PogChamp.txt', 'w', encoding='utf-8')
+    decipherMessage = open('decipher.txt', 'w', encoding='utf-8')
     decipherMessage.write(deciphered)
 ceaser_decipher(decipher,key)
